@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Resume Maker</title>
+    <link href="resume.css" rel="stylesheet">
+    <script src="resume.js" ></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Resume Maker</h1>
+        
+        <!-- Form Container -->
+        <div class="form-container" id="resume-form">
+            <!-- Personal Information -->
+            <div class="form-section">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="john.doe@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="(123) 456-7890">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="City, State">
+                </div>
+                <div class="form-group">
+                    <label for="summary">Professional Summary</label>
+                    <textarea id="summary" placeholder="A brief summary of your professional background and career goals..."></textarea>
+                </div>
+            </div>
+            
+            <!-- Work Experience -->
+            <div class="form-section">
+                <h2>Work Experience</h2>
+                <div id="experience-container">
+                    <!-- Experience items will be added here -->
+                </div>
+                <button type="button" id="add-experience">Add Work Experience</button>
+            </div>
+            
+            <!-- Education -->
+            <div class="form-section">
+                <h2>Education</h2>
+                <div id="education-container">
+                    <!-- Education items will be added here -->
+                </div>
+                <button type="button" id="add-education">Add Education</button>
+            </div>
+            
+            <!-- Skills -->
+            <div class="form-section">
+                <h2>Skills</h2>
+                <div class="form-group">
+                    <label for="skills">Enter skills (comma separated)</label>
+                    <input type="text" id="skills" placeholder="HTML, CSS, JavaScript, Communication, Leadership">
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button type="button" id="generate-resume">Generate Resume</button>
+                <button type="button" id="reset-form">Reset Form</button>
+            </div>
+        </div>
+        
+        <!-- Preview Container -->
+        <div class="resume-preview hidden" id="resume-preview">
+            <!-- Resume content will be generated here -->
+        </div>
+        
+        <button type="button" id="print-button" class="hidden">Print Resume</button>
+        <button type="button" class="back-to-edit hidden" id="back-to-edit">Back to Edit</button>
+    </div>
+    
+    
+</body>
+</html>
